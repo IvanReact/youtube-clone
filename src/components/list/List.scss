@@ -1,0 +1,11 @@
+@import '../../App.scss';
+
+main {
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 60px;
+}
+

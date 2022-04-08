@@ -1,0 +1,38 @@
+.thumbnailcontainer {
+  display: flex;
+  width: 100%;
+  img {
+      width: 80% !important;
+  };
+  img:hover {
+    cursor: pointer !important;
+  }
+}
+
+.titlecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  h2 {
+      font-family: Rubik;
+  };
+  h5 {
+      font-family: Rubik;
+      font-style: italic;
+  };
+}
+
+.videocontainer {
+  display: flex;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 0px 0px 20px 0px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 426px) {
+      .videocontainer {
+          flex-direction: column;
+      }
+}

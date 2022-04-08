@@ -1,0 +1,36 @@
+@import '../../App.scss';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 15px;
+    border: 2px solid black;
+    margin: 2px;
+
+    h1 {
+        color: red;
+        border: 2px solid red;
+        padding: 10px;
+        font-family: $logo-font;
+        letter-spacing: 2px;
+    }
+
+    input {
+    border: none;
+    border-radius: 20px;
+    border: 1px solid red;
+    color: red;
+    padding: 10px;
+    margin: 5px;
+    }
+
+    button {
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: red;
+    border-radius: 20px;
+    }
+    
+}
