@@ -1,17 +1,17 @@
 import React from 'react';
 import './Player.scss';
 
-class Player extends React.Component {
-  displayClasses = () => {
-    return this.props.show ? 'show-iframe': 'hide-iframe';
+function Player (props) {
+  const displayClasses = () => {
+    return props.show ? 'show-iframe': 'hide-iframe';
   }
-  render() {
+
     return (
       <iframe 
-        className={this.displayClasses()}
-        width={this.props.width} 
-        height={this.props.height} 
-        src={"https://www.youtube.com/embed/"+this.props.src}
+        className={displayClasses()}
+        width={props.width} 
+        height={props.height} 
+        src={"https://www.youtube.com/embed/"+props.src}
         title="YouTube video player" 
         frameBorder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -19,7 +19,7 @@ class Player extends React.Component {
       >
       </iframe>
     );
-  }
+
 }
 
 export default Player;

@@ -1,35 +1,30 @@
 import React from 'react';
 import './Card.scss';
 
-class Card extends React.Component {
+function Card (props) {
 
-  constructor(props) {
-    super(props);
-  }
-
-  startPlayer = () => {
+  const startPlayer = () => {
     let player = {
       show: true,
-      width: this.props.item.snippet.thumbnails.high.width,
-      height: this.props.item.snippet.thumbnails.high.height,
-      src: this.props.item.id.videoId
+      width: props.item.snippet.thumbnails.high.width,
+      height: props.item.snippet.thumbnails.high.height,
+      src: props.item.id.videoId
     }
-    this.props.setPlayer(player);
+    props.setPlayer(player);
   }
   
-  render () {
     return (
       <div className='videocontainer'>
-        <div className='thumbnailcontainer' onClick={e=>this.startPlayer(e)}>
-          <img src={this.props.item.snippet.thumbnails.medium.url} />
+        <div className='thumbnailcontainer' onClick={e=>startPlayer(e)}>
+          <img src={props.item.snippet.thumbnails.medium.url} alt="video" />
         </div>
         <div className='titlecontainer'>
-        <h2>{this.props.item.snippet.title}</h2>
-        <h5>{this.props.item.snippet.description}</h5>
+        <h2>{props.item.snippet.title}</h2>
+        <h5>{props.item.snippet.description}</h5>
         </div>
       </div>
     );
-  }
+
 }
 
 export default Card;

@@ -1,33 +1,21 @@
-import React from 'react';
-import Card from '../card/Card';
-import './List.scss';
+import React from "react";
 
-class List extends React.Component {
+import Card from "../card/Card";
+import "./style.scss";
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      data: this.props.data,
-      searchQuery: this.props.searchQuery
-    }
+function List(props) {
+  
+  if (!props.data) {
+    return null;
   }
 
-  componentDidUpdate() {
-    if (this.state.data !== this.props.data) {
-      this.setState({
-        data: this.props.data,
-        searchQuery: this.props.searchQuery
-      });
-    }
-  }
-
-  render() {
-    return (
+  return (
     <main>
-      {this.props.data.map(item=><Card setPlayer={this.props.setPlayer} key={item.id.videoId} item={item}/>)}
+      {props.data.map((e) => {
+        return <Card setPlayer={props.setPlayer} key={e.id.videoId} item={e} />;
+      })}
     </main>
-    );
-  }
+  );
 }
 
 export default List;
