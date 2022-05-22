@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} update={update}/>
+      <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} update={update} setPlayer={setPlayer}/>
       <Player
         show={player.show}
         width={player.width}
