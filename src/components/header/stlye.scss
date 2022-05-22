@@ -8,12 +8,30 @@ header {
     border: 2px solid black;
     margin: 2px;
 
+    @media screen and (max-width: 426px) {
+        flex-direction: column;
+    }
+
+    .search{
+        @media screen  and (max-width: 426px) {
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+        }
+    }
+
     h1 {
         color: red;
         border: 2px solid red;
         padding: 10px;
         font-family: $logo-font;
         letter-spacing: 2px;
+
+        @media screen and (max-width: 426px) {
+            width: 20rem;
+            text-align: center;
+            letter-spacing: 1rem;
+        }
     }
 
     input {
